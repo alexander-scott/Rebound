@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rebound.CSharp", "Rebound.CSharp.csproj", "{DA039297-6EAF-0F5B-1579-B8A51BFF58E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rebound.CSharp.Editor", "Rebound.CSharp.Editor.csproj", "{5262EAC9-E524-D3A9-CB88-C6E7BBA8BDC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA039297-6EAF-0F5B-1579-B8A51BFF58E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA039297-6EAF-0F5B-1579-B8A51BFF58E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA039297-6EAF-0F5B-1579-B8A51BFF58E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA039297-6EAF-0F5B-1579-B8A51BFF58E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5262EAC9-E524-D3A9-CB88-C6E7BBA8BDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5262EAC9-E524-D3A9-CB88-C6E7BBA8BDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5262EAC9-E524-D3A9-CB88-C6E7BBA8BDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5262EAC9-E524-D3A9-CB88-C6E7BBA8BDC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

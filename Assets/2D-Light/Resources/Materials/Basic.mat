@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Basic
+  m_Shader: {fileID: 4800000, guid: 1df7f570e968043709a3dca9dd3c4e21, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: abdf6bad6338b1c4c8598ede37d8bbd5, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _AlphaTex
+        second:
+          m_Texture: {fileID: 2800000, guid: f4e4634b9f4f24249b10d4c8eb320bc0, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DecalTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Mask
+        second:
+          m_Texture: {fileID: 2800000, guid: b92f8446bf06a4b3cb1f584abbe5a292, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Cutoff
+        second: 1
+      data:
+        first:
+          name: PixelSnap
+        second: 0
+      data:
+        first:
+          name: _Opacity
+        second: .5
+      data:
+        first:
+          name: _Intensity
+        second: 1
+      data:
+        first:
+          name: _RotationSpeed
+        second: 10
+    m_Colors:
+      data:
+        first:
+          name: _LightColor
+        second: {r: .595588207, g: .183931649, b: .183931649, a: 1}
+      data:
+        first:
+          name: _Color
+        second: {r: .323529422, g: .323529422, b: .323529422, a: .384313732}
+      data:
+        first:
+          name: _Color2
+        second: {r: .177497834, g: .177497834, b: .360294104, a: .984313726}
+      data:
+        first:
+          name: _ShaderColor
+        second: {r: .270588249, g: .384313732, b: .670588255, a: .501960814}

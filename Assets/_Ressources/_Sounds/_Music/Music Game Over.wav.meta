@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: cf8234b317b3d764ba10f53d9486f45f
+labels:
+- USFX
+- stereo
+- musiceffect
+- negative
+AudioImporter:
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 1
+    sampleRateOverride: 0
+    compressionFormat: 2
+    quality: 0
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 1
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 1
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

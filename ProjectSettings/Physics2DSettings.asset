@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!19 &1
+Physics2DSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Gravity: {x: 0, y: -98}
+  m_DefaultMaterial: {fileID: 6200000, guid: 7cc6e9a666a654a1ab6e7c8301be3db8, type: 2}
+  m_VelocityIterations: 5
+  m_PositionIterations: 3
+  m_VelocityThreshold: 1
+  m_MaxLinearCorrection: 0.2
+  m_MaxAngularCorrection: 8
+  m_MaxTranslationSpeed: 100
+  m_MaxRotationSpeed: 360
+  m_MinPenetrationForPenalty: 0.01
+  m_BaumgarteScale: 0.2
+  m_BaumgarteTimeOfImpactScale: 0.75
+  m_TimeToSleep: 0.5
+  m_LinearSleepTolerance: 0.01
+  m_AngularSleepTolerance: 2
+  m_QueriesHitTriggers: 0
+  m_QueriesStartInColliders: 0
+  m_ChangeStopsCallbacks: 0
+  m_LayerCollisionMatrix: c840ffffc840ffffc840ffffffffffffc840ffffc840ffffffffffffffffffffc862ffffc849ffffc840ffffc802ffffc840ffffc801ffffff17ffffc800ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
