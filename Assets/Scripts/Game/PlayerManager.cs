@@ -50,9 +50,21 @@ public class PlayerManager : MonoBehaviorHelper
         {
             if (_rigidbody.velocity.y > 0f)
             {
-                _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y * -0.3f);
+                //_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y * -0.3f);
+                _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y * -1f);
             }
                 
+        }
+
+        Vector3 wrld2 = Camera.main.ScreenToWorldPoint(new Vector3(0f, 0f, 0f));
+        if (transform.position.y < wrld2.y)
+        {
+            if (_rigidbody.velocity.y < 0f)
+            {
+                //_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y * -0.3f);
+                _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y * -1f);
+            }
+
         }
     }
 
@@ -60,29 +72,28 @@ public class PlayerManager : MonoBehaviorHelper
 	{
 		_rigidbody = GetComponent<Rigidbody2D> ();
 		_rigidbody.isKinematic = true;
-		transform.position = Vector2.zero;
+		//transform.position = Vector2.zero;
 		canJump = false;
 
-        var recognizer = new TKSwipeRecognizer();
-        recognizer.boundaryFrame = new TKRect(0, 0, Screen.width, Screen.height);
-        recognizer.timeToSwipe = 1f;
-        recognizer.gestureRecognizedEvent += (r) =>
-        {
-            var vel = r.swipeVelocity;
-            if (vel > 99)
-                vel = 99;
-            _rigidbody.velocity = (r.endPoint - r.startPoint) /  ((100 - vel) / 30);
-            if (_rigidbody.velocity.y > 100f)
-            {
-                _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 100f);
-            }
-            if (_rigidbody.velocity.x > 100f)
-            {
-                _rigidbody.velocity = new Vector2(100f, _rigidbody.velocity.y);
-            }
-            gameManager.Add1Point();
-        };
-        TouchKit.addGestureRecognizer(recognizer);
+        //var recognizer = new TKSwipeRecognizer();
+        //recognizer.boundaryFrame = new TKRect(0, 0, Screen.width, Screen.height);
+        //recognizer.timeToSwipe = 0f;
+        //recognizer.gestureRecognizedEvent += (r) =>
+        //{
+        //    var vel = r.swipeVelocity;
+        //    if (vel > 99)
+        //        vel = 99;
+        //    _rigidbody.velocity = (r.endPoint - r.startPoint) /  ((100 - vel) / 30);
+        //    if (_rigidbody.velocity.y > 100f)
+        //    {
+        //        _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 100f);
+        //    }
+        //    if (_rigidbody.velocity.x > 100f)
+        //    {
+        //        _rigidbody.velocity = new Vector2(100f, _rigidbody.velocity.y);
+        //    }
+        //};
+        //TouchKit.addGestureRecognizer(recognizer);
 
 #if UNITY_TVOS
 		ConstantForceX *= 3;
@@ -145,7 +156,7 @@ public class PlayerManager : MonoBehaviorHelper
 			_rigidbody.isKinematic = false;
 		}
 
-		_rigidbody.velocity = new Vector2 (-ConstantForceX , ConstantForceY);
+		//_rigidbody.velocity = new Vector2 (-ConstantForceX , ConstantForceY);
 
 		StartCoroutine (OnStartDelay ());
 	}
@@ -184,12 +195,12 @@ public class PlayerManager : MonoBehaviorHelper
 		//_rigidbody.velocity = new Vector2 (_rigidbody.velocity.x * -1, _rigidbody.velocity.y);
 		if (coll.gameObject.name.Contains("WallLeft"))
 		{
-			//gameManager.Add1Point ();
+			gameManager.Add1Point ();
 			gameManager.SpawnParticleWallLeft (coll.contacts [0].point);
 		}
 		else if (coll.gameObject.name.Contains("WallRight")) 
 		{
-			//gameManager.Add1Point ();
+			gameManager.Add1Point ();
 			gameManager.SpawnParticleWallRight (coll.contacts [0].point);
 		} 
 		else if (coll.gameObject.name.Contains("Rectangle") || coll.gameObject.name.Contains("Carre")) 

@@ -93,6 +93,10 @@
     <Compile Include="Assets\2D-Light\Core\LOSRadialLight.cs" />
     <Compile Include="Assets\2D-Light\Utilities\SHelper.cs" />
     <Compile Include="Assets\2D-Light\Utilities\SMath.cs" />
+    <Compile Include="Assets\BallController.cs" />
+    <Compile Include="Assets\BallManager.cs" />
+    <Compile Include="Assets\BlockController.cs" />
+    <Compile Include="Assets\BlockManager.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Basics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Examples\Sequences.cs" />
     <Compile Include="Assets\Scripts\ButtonLeaderboard.cs" />

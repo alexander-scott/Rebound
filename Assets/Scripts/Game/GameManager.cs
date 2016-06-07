@@ -64,11 +64,6 @@ public class GameManager : MonoBehaviorHelper
 	/// </summary>
 	public ParticleEmitter particleExplosionWallRightPrefab;
 
-	/// <summary>
-	/// Reference to the life UI Text 
-	/// </summary>
-	public Text lifeText; 
-	/// <summary>
 	/// Reference to the point UI Text 
 	/// </summary>
 	public Text pointText; 
@@ -95,27 +90,6 @@ public class GameManager : MonoBehaviorHelper
 	{
 		return point;
 	}
-	/// <summary>
-	/// The total life the player have
-	/// </summary>
-	private int life;
-	/// <summary>
-	/// To get the total life the player have. Default = 3
-	/// </summary>
-	public int GetLife()
-	{
-		return PlayerPrefs.GetInt("LIFE",3);
-	}
-	/// <summary>
-	/// To set the total life the player have
-	/// </summary>
-	public void SetLife(int tot)
-	{
-		PlayerPrefs.SetInt("LIFE", tot);
-		PlayerPrefs.Save();
-		lifeText.text = "x" + tot.ToString();
-	}
-
 
 	private void Awake()
 	{
@@ -138,8 +112,8 @@ public class GameManager : MonoBehaviorHelper
 
 		ActivateButtonStart ();
 
-		CreateListRectangle (20);
-		CreateListCarre (20);
+		//CreateListRectangle (20);
+		//CreateListCarre (20);
 	}
 
 
@@ -277,9 +251,9 @@ public class GameManager : MonoBehaviorHelper
 
 		pointText.gameObject.SetActive (true);
 
-		StartCoroutine(Spawner ());
+		//StartCoroutine(Spawner ());
 
-		SpawnParticleStart();
+		//SpawnParticleStart();
 
         ActivateButtonStart();
 
