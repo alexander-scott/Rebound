@@ -11,7 +11,7 @@ public class BallManager : MonoBehaviour
     private int currentBallIndex = 0;
 
     // Use this for initialization
-    void Awake()
+    void Start()
     {
         SpawnBalls();
 
@@ -35,7 +35,7 @@ public class BallManager : MonoBehaviour
             var obj = Instantiate(BallPrefab) as GameObject;
             obj.transform.position = transform.position;
             obj.transform.parent = transform;
-            if (i != 1)
+            if (i != 0)
                 obj.gameObject.SetActive(false);    
 
             listOfBalls.Add(obj.transform);

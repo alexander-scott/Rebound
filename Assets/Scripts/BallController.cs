@@ -7,11 +7,20 @@ public class BallController : MonoBehaviour
     private float timer;
     private bool offScreen;
     private float timeTilInActive;
+    private float leftX;
+    private float rightX;
+    private float topY;
+    private float botY;
 
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         timeTilInActive = GetComponentInChildren<TrailRenderer>().time;
+
+        topY = Camera.main.ScreenToWorldPoint(new Vector3(0f, Screen.height, 0f)).y;
+        botY = Camera.main.ScreenToWorldPoint(new Vector3(0f, 0f, 0f)).y;
+        leftX = Camera.main.ScreenToWorldPoint(new Vector3(0f, 0f, 0f)).x;
+        rightX = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0f, 0f)).x;
     }
 
     // Update is called once per frame
@@ -31,19 +40,10 @@ public class BallController : MonoBehaviour
         }
         else
         {
-            Vector3 wrld = Camera.main.ScreenToWorldPoint(new Vector3(0f, Screen.height, 0f));
-            if (transform.position.y > wrld.y)
-            {
-                if (_rigidbody.velocity.y > 0f)
-                {
-                    //_rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y * -0.3f);
-                    _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _rigidbody.velocity.y * -1f);
-                }
-
-            }
-
-            Vector3 wrld2 = Camera.main.ScreenToWorldPoint(new Vector3(0f, 0f, 0f));
-            if (transform.position.y < wrld2.y)
+            if (transform.position.y > topY ||
+                transform.position.y < botY ||
+                transform.position.x < leftX ||
+                transform.position.x > rightX)
             {
                 if (!offScreen)
                 {
