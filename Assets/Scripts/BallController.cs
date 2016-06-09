@@ -12,6 +12,9 @@ public class BallController : MonoBehaviour
     private float topY;
     private float botY;
 
+    private Vector3 targetPos;
+    private bool moveToPos;
+
     void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -28,6 +31,12 @@ public class BallController : MonoBehaviour
     {
         if (!gameObject.activeSelf)
             return;
+
+        if (moveToPos)
+        {
+            float step = 3f * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, targetPos, step);
+        }
 
         if (offScreen)
         {
@@ -51,6 +60,22 @@ public class BallController : MonoBehaviour
                     timer = 0f;
                 }
             }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        OnCollision(coll.gameObject, coll);
+    }
+
+    void OnCollision(GameObject obj, Collision2D coll)
+    {
+        if (coll.gameObject.name.Contains("Goal"))
+        {
+            targetPos = coll.gameObject.transform.position;
+            GetComponent<Rigidbody2D>().isKinematic = true;
+            moveToPos = true;
+            Debug.Log("Hit goal");
         }
     }
 }
