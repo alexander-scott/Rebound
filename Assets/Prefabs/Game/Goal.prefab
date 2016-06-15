@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 429484}
   - 212: {fileID: 21266834}
   - 58: {fileID: 5866056}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Goal
   m_TagString: Goal
   m_Icon: {fileID: 0}
@@ -24,8 +24,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.68, y: -2.15, z: 0}
-  m_LocalScale: {x: 0.4908721, y: 0.48097876, z: 0.48097876}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.61535805, y: 0.6153581, z: 0.6153581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,7 +39,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2

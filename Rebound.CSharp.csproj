@@ -112,6 +112,7 @@
     <Compile Include="Assets\Scripts\Game\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Game\SoundManager.cs" />
     <Compile Include="Assets\Scripts\Game\UpdateButtonColor.cs" />
+    <Compile Include="Assets\Scripts\GoalManager.cs" />
     <Compile Include="Assets\Scripts\Input\InputTouch.cs" />
     <Compile Include="Assets\Scripts\PopupContinue.cs" />
     <Compile Include="Assets\Scripts\RateUs\RateUsManager.cs" />
